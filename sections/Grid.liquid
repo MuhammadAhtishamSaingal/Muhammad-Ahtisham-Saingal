@@ -72,33 +72,6 @@
                       {% endif %}
                     {% endfor %}
 
-                    <!-- size -->
-                    <!-- size -->
-                    {% comment %}
-                      {% for option in product.options_with_values %}
-                        {% if option.name == 'Size' %}
-                          <div class="{{ option.name }}-options">
-                            <span>
-                              {{ option.name }}
-                            </span>
-                          </div>
-                        {% endif %}
-                      {% endfor %}
-                      <div class="dropdown size-dropdown">
-                        {% for option in product.options_with_values %}
-                          {% if option.name == 'Size' %}
-                            <select>
-                              <option value="" disabled selected>Choose your size</option>
-                              {% for value in option.values %}
-                                <option value="{{ value | strip }}">{{ value | strip }}</option>
-                              {% endfor %}
-                            </select>
-                          {% endif %}
-                        {% endfor %}
-                      </div>
-                    {% endcomment %}
-                    <!-- Color Options -->
-
                     <!-- Size Options -->
                     {% for option in product.options_with_values %}
                       {% if option.name == 'Size' %}
@@ -144,7 +117,7 @@
 </section>
 {% schema %}
 {
-  "name": "Product Popup on Click",
+  "name": "Grid",
   "settings": [
     {
       "type": "text",
@@ -187,7 +160,7 @@
   ],
   "presets": [
     {
-      "name": "Gift Gallery",
+      "name": "Grid",
       "category": "Custom"
     }
   ]
@@ -400,12 +373,3 @@
     });
   });
 </script>
-
-<!-- Display the selected color somewhere -->
-<div class="selected-color-display">Selected Color: None</div>
-<!--
-  <script>
-    document.querySelectorAll('button.add-to-cart').forEach((opt)=>{ opt.addEventListener('click', function(e){
-    event.preventDefault(); event.stopPropagation(); this.closest('form').submit(); }) })
-  </script>
--->

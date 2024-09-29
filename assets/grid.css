@@ -5,6 +5,11 @@ form.add_form {
   display: grid;
   grid-template-columns: 2% 48% 2% 48%;
 }
+p.gift-guide-text {
+  margin-left: 54px;
+  font-size: 20px;
+  color: black;
+}
 span.colorss {
   border: 1px solid;
   border-right: unset;
@@ -337,6 +342,9 @@ z-index: 1;
     margin: 0 auto;
     max-width: 95%;
     justify-content: center;
+  }
+  .mobile_decription p {
+    margin-bottom: 40px;
   }
   button.add-to-cart {
     font-size: 10px;

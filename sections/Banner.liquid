@@ -74,7 +74,11 @@
         <p>No image selected</p>
       {% endif %}
     </div>
+
     <div class="mobile_data">
+      <div class="mobile_decription">
+        <p>{{ section.settings.mobile_descp }}</p>
+      </div>
       <div class="banner-sectionss">
         <a href="/" class="banner-buttonss"
           >Shop Now<span class="arrowss">
@@ -86,6 +90,9 @@
       </div>
     </div>
   </div>
+  <div class="bottom_texts">
+    <p>{{ section.settings.bottom_text }}</p>
+  </div>
 </section>
 <style>
   .banner-sectionss{background-image:url("{{ section.settings.banner_imagess | img_url: 'master' }}");
@@ -93,7 +100,7 @@
 </style>
 {% schema %}
 {
-  "name": "Gift & Nav Section",
+  "name": "Banner",
   "settings": [
         {
       "type": "text",
@@ -193,6 +200,12 @@
     },
     {
       "type": "text",
+      "id": "bottom_text",
+      "label": "Button Text",
+      "default": "SUSTAINABLE, ETHICALLY MADE ACTIVEWEAR"
+    },
+    {
+      "type": "text",
       "id": "button_textss",
       "label": "Button Text",
       "default": "Shop Now"
@@ -201,12 +214,18 @@
       "type": "url",
       "id": "button_linkss",
       "label": "Mobile Button Link"
+    },
+    {
+      "type": "text",
+      "id": "mobile_descp",
+      "label": "Button Text",
+      "default": "Discover Joy: Your Ultimate Holiday Gift Destination."
     }
 
   ],
   "presets": [
     {
-      "name": "Gift Guide and Nav",
+      "name": "Banner",
       "category": "Custom Sections",
       "settings": {
         "title": "The Gift Guide",

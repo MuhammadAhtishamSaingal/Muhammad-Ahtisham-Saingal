@@ -8,7 +8,25 @@
   justify-content: center;
   align-items: end;
 }
-
+a.shop-now-button {
+  border-radius: unset;
+}
+.bottom_texts {
+  display: flex;
+  justify-content: center;
+  background: #f5f5f5;
+}
+.mobile_decription p {
+  display: flex;
+  justify-content: center;
+  /* font-family: Jost; */
+  font-size: 20px;
+  color: black;
+  /* max-width: 90%; */
+  font-weight: 400;
+  line-height: 20.8px;
+  text-align: center;
+}
 .banner-buttonss {
   background-color: #000;
   color: #fff;
@@ -40,6 +58,12 @@
   }
   button.add-to-cart span {
     font-size: 10px;
+  }
+  h2.gift-guide-title {
+    margin-bottom: 0px;
+  }
+  p.gift-guide-text {
+    display: none !important;
   }
 }
 
@@ -335,9 +359,11 @@ a.shop-now-button {
   display: block;
   object-fit: cover;
 }
-
+.menu-content.show {
+  background-color: #f5f5f5;
+}
 nav {
-  background-color: white;
+  background-color: #f5f5f5;
   padding: 10px;
   position: relative;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -407,15 +433,7 @@ nav {
 .cta-button:hover {
   background-color: #ffe24a;
 }
-p.gift-guide-text {
-  font-family: sans-serif;
-  font-size: 20px;
-  margin-left: 54px;
-  font-weight: 400;
-  line-height: 28px;
-  display: flex;
-  text-align: justify;
-}
+
 h2.gift-guide-title {
   font-family: sans-serif;
   font-size: 70px;
@@ -500,13 +518,7 @@ h2.gift-guide-title {
     margin: 0 auto;
     flex-direction: column;
   }
-  p.gift-guide-text {
-    font-size: 15px;
-    font-weight: 400;
-    line-height: 20.8px;
-    text-align: center;
-    margin: 0 auto;
-  }
+
   h2.gift-guide-title {
     font-family: sans-serif;
     font-size: 30px;
@@ -529,6 +541,9 @@ h2.gift-guide-title {
     display: none;
   }
   .gift-guide-illustration.mobile_image {
+    display: none;
+  }
+  .mobile_data {
     display: none;
   }
 }
@@ -676,7 +691,7 @@ h2.gift-guide-title {
 }
 @media only screen and (min-width: 375px) and (max-width: 390px) {
   .popup-image img {
-    width: 81px;
+    width: 77px;
     height: 100px;
   }
   .add-to-cart {
@@ -708,7 +723,7 @@ h2.gift-guide-title {
   .popup-image {
     display: grid;
     grid-template-columns: 46% 54%;
-    max-width: 95%;
+    max-width: 100%;
   }
   .products_details h3 {
     font-size: 10px;
@@ -1192,13 +1207,278 @@ h2.gift-guide-title {
     align-items: flex-start;
   }
 }
-@media only screen and (min-width: 668px) and (max-width: 767px) {
+@media only screen and (min-width: 668px) and (max-width: 810px) {
   .popup-image img {
-    width: 147px;
-    height: 186px;
+    width: 100px;
+    height: 100px;
+  }
+  h2.gift-guide-title {
+    font-family: sans-serif;
+    font-size: 28px;
+    font-weight: 500;
+    display: flex;
+    text-align: justify;
+    margin-left: 0px;
+  }
+  p.gift-guide-text {
+    font-family: sans-serif;
+    font-size: 14px;
+    margin-left: 0px;
+    font-weight: 400;
+    margin-top: 0;
+    line-height: 22px;
+    display: flex;
+    text-align: justify;
+  }
+  a.shop-now-button {
+    font-family: sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20.48px;
+    text-align: center;
+    height: 50px;
+    left: 67px;
+    gap: 0px;
+    opacity: 0px;
+  }
+  span.arrows svg {
+    width: 22px;
+    margin-left: 10px;
+  }
+  .gift-guide-content {
+    text-align: center !important;
+    max-width: 80% !important;
+    width: 100%;
+    margin-bottom: 20px;
+    margin: 0 auto;
+  }
+  .add-to-cart {
+    font-size: 10px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  }
+
+  .main_devss {
+    row-gap: 10px;
+  }
+  .menu {
+    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 2.2fr;
+  }
+  .popup-image {
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
+  .products_details h3 {
+    font-size: 10px;
+    margin-top: 20px;
+  }
+  .names {
+    height: 30px;
+    line-height: 10px;
+    font-size: 10px;
+    padding-top: 10px;
+    margin-top: 0px;
+    white-space: nowrap;
+    padding-left: 5px;
+  }
+  .drop-downs {
+    grid-template-columns: 5fr 2fr;
+    display: grid;
+  }
+  .drop-labels {
+    font-size: 12px;
+    font-weight: 400;
+    color: #333;
+    margin-bottom: 5px;
+    display: block;
+  }
+  .products_details .description {
+    margin-bottom: 10px;
+    font-family: sans-serif;
+    font-size: 10px;
+    font-weight: 300;
+    line-height: 15.4px;
+    letter-spacing: -0.01em;
+    text-align: left;
+    line-height: 1.4;
+  }
+  .products_details .price {
+    font-family: Lustria;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 0.2px;
+    text-align: left;
+  }
+  .products_imagge {
+    margin-top: 20px;
+  }
+  .drop-downs {
+    padding: 0px;
+  }
+  .Color-option {
+    border: 1px solid #000;
+    padding: 2px;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: flex;
+  }
+  .close {
+    top: 0px;
+  }
+  .popup-content {
+    padding: 7px;
+    display: flex;
+    align-items: flex-start;
   }
 }
-@media only screen and (min-width: 768px) and (max-width: 992px) {
+@media only screen and (min-width: 810px) and (max-width: 840px) {
+  .popup-image img {
+    width: 110px;
+    height: 124px;
+  }
+  h2.gift-guide-title {
+    font-family: sans-serif;
+    font-size: 31px;
+    font-weight: 500;
+    display: flex;
+    text-align: justify;
+    margin-left: 54px;
+  }
+  p.gift-guide-text {
+    font-family: sans-serif;
+    font-size: 17px;
+    margin-left: 54px;
+    font-weight: 400;
+    margin-top: 0;
+    line-height: 28px;
+    display: flex;
+    text-align: justify;
+  }
+  a.shop-now-button {
+    font-family: sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20.48px;
+    text-align: center;
+    height: 50px;
+    left: 67px;
+    gap: 0px;
+    opacity: 0px;
+  }
+  .add-to-cart {
+    font-size: 10px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  }
+  p.gift-guide-text {
+    font-family: sans-serif;
+    font-size: 17px;
+    margin-left: 54px;
+    font-weight: 400;
+    margin-top: 0px;
+    line-height: 28px;
+    display: flex;
+    text-align: justify;
+  }
+  h2.gift-guide-title {
+    font-family: sans-serif;
+    font-size: 31px;
+    font-weight: 500;
+    display: flex;
+    text-align: justify;
+    margin-left: 54px;
+  }
+  .popup-image {
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
+  .products_details h3 {
+    font-size: 10px;
+    margin-top: 20px;
+  }
+  .popupss {
+    display: none;
+    position: absolute;
+    z-index: 10;
+    left: 0px !important;
+    top: -18px;
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 5px 15px #0000004d;
+  }
+  form.add_form {
+    margin-top: 11px;
+  }
+  .names {
+    height: 30px;
+    line-height: 10px;
+    font-size: 14px;
+    padding-top: 10px;
+    margin-top: 0px;
+    white-space: nowrap;
+    padding-left: 5px;
+  }
+  .drop-downs {
+    grid-template-columns: 5fr 2fr;
+    display: grid;
+  }
+  .drop-labels {
+    font-size: 12px;
+    font-weight: 400;
+    color: #333;
+    margin-bottom: 5px;
+    display: block;
+  }
+  .products_details .description {
+    margin-bottom: 12px;
+    font-family: sans-serif;
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 15.4px;
+    letter-spacing: -0.01em;
+    text-align: left;
+    line-height: 1.4;
+  }
+
+  .products_details .price {
+    font-family: Lustria;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 0.2px;
+    text-align: left;
+  }
+  .products_imagge {
+    margin-top: 20px;
+  }
+  .drop-downs {
+    padding: 0px;
+  }
+  .Color-option {
+    border: 1px solid #000;
+    padding: 2px;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: flex;
+  }
+  .close {
+    top: 0px;
+  }
+  .popup-content {
+    padding: 7px;
+    display: flex;
+    align-items: flex-start;
+  }
+}
+@media only screen and (min-width: 840px) and (max-width: 992px) {
   .popup-image img {
     width: 124px;
     height: 124px;
