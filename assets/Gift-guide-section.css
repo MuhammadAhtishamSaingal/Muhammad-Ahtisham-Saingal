@@ -1,8 +1,228 @@
+.banner-sectionss {
+  position: relative;
+  width: 100%;
+  height: 400px; /* You can adjust this height or make it flexible with min-height */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+}
+
+.banner-buttonss {
+  background-color: #000;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 700;
+  width: 190px;
+  top: 337px;
+  left: 90.78px;
+  height: 50px;
+  padding: 13px 20px 13px 20px;
+  gap: 10px;
+  opacity: 0px;
+  text-align: center;
+  text-decoration: none;
+  margin-bottom: 75px;
+}
+
+.banner-buttonss:hover {
+  background-color: #333;
+}
+
+/* Make sure the height adapts on mobile */
+@media screen and (max-width: 768px) {
+  .banner-section {
+    height: 250px; /* Adjust for smaller screens */
+  }
+  button.add-to-cart svg {
+    margin-left: 12px !important;
+  }
+  button.add-to-cart span {
+    font-size: 10px;
+  }
+}
+
 .custom-nav-bar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px;
+}
+/* Basic button styling */
+.add-to-cart {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #000;
+  color: #fff;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.add-to-cart svg {
+  margin-left: 10px;
+  transition: transform 0.3s ease, fill 0.3s ease;
+}
+
+.add-to-cart svg path {
+  fill: white; /* Initial color of the arrow */
+  transition: fill 0.3s ease;
+}
+
+/* Hover effect on button */
+.add-to-cart:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+.add-to-cart:hover svg path {
+  fill: #000; /* Change the arrow color to black on hover */
+}
+
+.add-to-cart:hover svg {
+  transform: translateX(8px); /* Move the arrow to the right */
+}
+
+/* Add a subtle scale effect to the button */
+.add-to-cart:hover {
+  transform: scale(1.05); /* Scale the button */
+}
+
+/* Optional: Add a background transition effect */
+.add-to-cart:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #f0f0f0;
+  z-index: 0;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease;
+}
+
+.add-to-cart:hover:before {
+  transform: scaleX(1);
+  transform-origin: left;
+  z-index: -1;
+}
+
+/* Active state on click */
+.add-to-cart:active {
+  transform: scale(0.95);
+}
+
+button.add-to-cart svg {
+  margin-left: 22px;
+}
+button.add-to-cart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 45px;
+  font-size: 16px;
+}
+.shop-now-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #f0c14b;
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Button hover effect */
+.shop-now-button:hover {
+  background-color: #d4a02d;
+  transform: translateY(-2px); /* Slight lift effect */
+}
+
+/* Arrow container */
+.arrowss {
+  display: inline-block;
+  margin-left: 10px;
+  transition: transform 0.3s ease;
+}
+
+/* Slide the arrow to the right on hover */
+.shop-now-button:hover .arrowss {
+  transform: translateX(8px); /* Move arrow slightly to the right */
+}
+
+/* Change the arrow color on hover */
+.shop-now-button:hover .arrowss svg path {
+  fill: black; /* Change arrow color to black */
+}
+
+/* Optional: Add shadow for depth */
+.shop-now-button {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.shop-now-button:hover {
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+.shop-now-button:hover .arrowss svg path {
+  fill: black; /* Change the color to black */
+}
+.buttonss {
+  display: inline-block;
+}
+
+.cta-button {
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #f0c14b;
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+/* Button hover effect */
+.cta-button:hover {
+  background-color: #d4a02d;
+  transform: translateY(-2px); /* Slight lift effect */
+}
+
+/* Animation for arrow */
+.cta-button .arows {
+  display: inline-block;
+  margin-left: 10px;
+  transition: transform 0.3s ease;
+}
+
+/* Slide the arrow to the right on hover */
+.cta-button:hover .arows {
+  transform: translateX(8px); /* Move arrow slightly to the right */
+}
+
+/* Animation for the SVG color fill on hover */
+.cta-button:hover .arows svg path {
+  fill: black;
+}
+
+/* Optional: button shadow effect */
+.cta-button {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.cta-button:hover {
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
 }
 span.arows {
   margin-left: 12px;
@@ -204,17 +424,7 @@ h2.gift-guide-title {
   text-align: justify;
   margin-left: 54px;
 }
-a.shop-now-button {
-  font-family: sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-  width: 220px;
-  line-height: 20.48px;
-  display: flex;
-  text-align: justify;
-  margin-left: 54px;
-  height: 50px;
-}
+
 .custom-nav-bar .logo h1 {
   font-family: sans-serif;
   font-size: 24px;
@@ -229,6 +439,12 @@ a.shop-now-button {
   .menu-icon,
   .close-icon {
     display: flex;
+  }
+  a.shop-now-button {
+    display: none;
+  }
+  .gift-guide-illustration {
+    display: none;
   }
   .add-to-cart {
     font-size: 10px;
@@ -271,7 +487,7 @@ a.shop-now-button {
     text-align: center;
     padding: 20px;
     background-color: white;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
   }
 
   .menu-content.show {
@@ -307,6 +523,9 @@ a.shop-now-button {
 
 @media only screen and (min-width: 768px) {
   .menuss {
+    display: none;
+  }
+  .banner-sectionss {
     display: none;
   }
   .gift-guide-illustration.mobile_image {
@@ -360,10 +579,11 @@ a.shop-now-button {
   }
   .popup-image {
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 41% 60%;
+    max-width: 95%;
   }
   .products_details h3 {
-    font-size: 10px;
+    font-size: 9px;
     margin-top: 20px;
   }
   .names {
@@ -425,18 +645,7 @@ a.shop-now-button {
     display: flex;
     align-items: flex-start;
   }
-  a.shop-now-button {
-    font-family: sans-serif;
-    font-size: 16px;
-    font-weight: 400;
-    margin-top: 150px;
-    position: absolute;
-    line-height: 20.48px;
-    display: flex;
-    text-align: justify;
-    margin-left: 14px;
-    height: 50px;
-  }
+
   .gift-guide-content {
     text-align: center;
     max-width: 65%;
@@ -453,9 +662,11 @@ a.shop-now-button {
     flex-direction: column;
   }
   .gift-guide-content {
-    text-align: center;
+    text-align: center !important;
     max-width: 80% !important;
+    width: 100%;
     margin-bottom: 20px;
+    margin: 0 auto;
   }
   .menu {
     align-items: center;
@@ -478,22 +689,13 @@ a.shop-now-button {
     width: 22px;
     margin-left: 10px;
   }
-  a.shop-now-button {
-    font-family: sans-serif;
-    font-size: 16px;
-    font-weight: 400;
-    margin-top: 150px;
-    position: absolute;
-    line-height: 20.48px;
-    display: flex;
-    text-align: justify;
-    margin-left: 14px;
-    height: 50px;
-  }
+
   .gift-guide-content {
-    text-align: center;
+    text-align: center !important;
     max-width: 80% !important;
+    width: 100%;
     margin-bottom: 20px;
+    margin: 0 auto;
   }
   .main_devss {
     row-gap: 10px;
@@ -505,7 +707,8 @@ a.shop-now-button {
   }
   .popup-image {
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 46% 54%;
+    max-width: 95%;
   }
   .products_details h3 {
     font-size: 10px;
@@ -590,18 +793,7 @@ a.shop-now-button {
     display: flex;
     justify-content: center;
   }
-  a.shop-now-button {
-    font-family: sans-serif;
-    font-size: 16px;
-    font-weight: 400;
-    margin-top: 150px;
-    position: absolute;
-    line-height: 20.48px;
-    display: flex;
-    text-align: justify;
-    margin-left: 14px;
-    height: 50px;
-  }
+
   .gift-guide-content {
     text-align: center !important;
     max-width: 80% !important;
@@ -619,7 +811,8 @@ a.shop-now-button {
   }
   .popup-image {
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 46% 54%;
+    max-width: 95%;
   }
   .products_details h3 {
     font-size: 10px;
@@ -703,7 +896,8 @@ a.shop-now-button {
   }
   .popup-image {
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 46% 54%;
+    max-width: 95%;
   }
   .products_details h3 {
     font-size: 10px;
@@ -769,7 +963,26 @@ a.shop-now-button {
     align-items: flex-start;
   }
 }
-@media only screen and (min-width: 414px) and (max-width: 540px) {
+@media only screen and (min-width: 414px) and (max-width: 490px) {
+  .popup-image {
+    display: grid;
+    grid-template-columns: 54% 46%;
+    max-width: 95%;
+  }
+  .products_details .description {
+    margin-bottom: 10px;
+    font-family: sans-serif;
+    font-size: 8px;
+  }
+  .products_details h3 {
+    font-size: 13px;
+  }
+  .popup-image img {
+    width: 92px;
+    height: 132px;
+  }
+}
+@media only screen and (min-width: 490px) and (max-width: 540px) {
   .popup-image img {
     width: 100px;
     height: 100px;
@@ -779,9 +992,11 @@ a.shop-now-button {
     margin-left: 10px;
   }
   .gift-guide-content {
-    text-align: center;
+    text-align: center !important;
     max-width: 80% !important;
+    width: 100%;
     margin-bottom: 20px;
+    margin: 0 auto;
   }
   .add-to-cart {
     font-size: 10px;
@@ -789,18 +1004,118 @@ a.shop-now-button {
     display: flex;
     justify-content: center;
   }
-  a.shop-now-button {
-    font-family: sans-serif;
-    font-size: 16px;
-    font-weight: 400;
-    margin-top: 150px;
-    position: absolute;
-    line-height: 20.48px;
-    display: flex;
-    text-align: justify;
-    margin-left: 14px;
-    height: 50px;
+
+  .main_devss {
+    row-gap: 10px;
   }
+  .menu {
+    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 2.2fr;
+  }
+  .popup-image {
+    display: grid;
+    grid-template-columns: 46% 54%;
+    max-width: 95%;
+  }
+  .products_details h3 {
+    font-size: 10px;
+    margin-top: 20px;
+  }
+  .names {
+    height: 30px;
+    line-height: 10px;
+    font-size: 10px;
+    padding-top: 10px;
+    margin-top: 0px;
+    white-space: nowrap;
+    padding-left: 5px;
+  }
+  .drop-downs {
+    grid-template-columns: 5fr 2fr;
+    display: grid;
+  }
+  .drop-labels {
+    font-size: 12px;
+    font-weight: 400;
+    color: #333;
+    margin-bottom: 5px;
+    display: block;
+  }
+  .products_details .description {
+    margin-bottom: 10px;
+    font-family: sans-serif;
+    font-size: 10px;
+    font-weight: 300;
+    line-height: 15.4px;
+    letter-spacing: -0.01em;
+    text-align: left;
+    line-height: 1.4;
+  }
+  .products_details .price {
+    font-family: Lustria;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 0.2px;
+    text-align: left;
+  }
+  .products_imagge {
+    margin-top: 20px;
+  }
+  .drop-downs {
+    padding: 0px;
+  }
+  .Color-option {
+    border: 1px solid #000;
+    padding: 2px;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: flex;
+  }
+  .close {
+    top: 0px;
+  }
+  .popup-content {
+    padding: 7px;
+    display: flex;
+    align-items: flex-start;
+  }
+}
+@media only screen and (min-width: 540px) and (max-width: 660px) {
+  .popup-image img {
+    width: 100px;
+    height: 100px;
+  }
+  .popup-image {
+    display: grid;
+    grid-template-columns: 45% 55%;
+    width: 95%;
+  }
+}
+@media only screen and (min-width: 660px) and (max-width: 767px) {
+  .popup-image img {
+    width: 100px;
+    height: 100px;
+  }
+  span.arrows svg {
+    width: 22px;
+    margin-left: 10px;
+  }
+  .gift-guide-content {
+    text-align: center !important;
+    max-width: 80% !important;
+    width: 100%;
+    margin-bottom: 20px;
+    margin: 0 auto;
+  }
+  .add-to-cart {
+    font-size: 10px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  }
+
   .main_devss {
     row-gap: 10px;
   }
@@ -877,112 +1192,10 @@ a.shop-now-button {
     align-items: flex-start;
   }
 }
-@media only screen and (min-width: 540px) and (max-width: 767px) {
+@media only screen and (min-width: 668px) and (max-width: 767px) {
   .popup-image img {
-    width: 100px;
-    height: 100px;
-  }
-  span.arrows svg {
-    width: 22px;
-    margin-left: 10px;
-  }
-  .gift-guide-content {
-    text-align: center;
-    max-width: 80% !important;
-    margin-bottom: 20px;
-  }
-  .add-to-cart {
-    font-size: 10px;
-    align-items: center;
-    display: flex;
-    justify-content: center;
-  }
-  a.shop-now-button {
-    font-family: sans-serif;
-    font-size: 16px;
-    font-weight: 400;
-    margin-top: 150px;
-    position: absolute;
-    line-height: 20.48px;
-    display: flex;
-    text-align: justify;
-    margin-left: 14px;
-    height: 50px;
-  }
-  .main_devss {
-    row-gap: 10px;
-  }
-  .menu {
-    align-items: center;
-    display: grid;
-    grid-template-columns: 1fr 2.2fr;
-  }
-  .popup-image {
-    display: grid;
-    grid-template-columns: 50% 50%;
-  }
-  .products_details h3 {
-    font-size: 10px;
-    margin-top: 20px;
-  }
-  .names {
-    height: 30px;
-    line-height: 10px;
-    font-size: 10px;
-    padding-top: 10px;
-    margin-top: 0px;
-    white-space: nowrap;
-    padding-left: 5px;
-  }
-  .drop-downs {
-    grid-template-columns: 5fr 2fr;
-    display: grid;
-  }
-  .drop-labels {
-    font-size: 12px;
-    font-weight: 400;
-    color: #333;
-    margin-bottom: 5px;
-    display: block;
-  }
-  .products_details .description {
-    margin-bottom: 10px;
-    font-family: sans-serif;
-    font-size: 10px;
-    font-weight: 300;
-    line-height: 15.4px;
-    letter-spacing: -0.01em;
-    text-align: left;
-    line-height: 1.4;
-  }
-  .products_details .price {
-    font-family: Lustria;
-    font-size: 12px;
-    font-weight: 400;
-    line-height: 0.2px;
-    text-align: left;
-  }
-  .products_imagge {
-    margin-top: 20px;
-  }
-  .drop-downs {
-    padding: 0px;
-  }
-  .Color-option {
-    border: 1px solid #000;
-    padding: 2px;
-    justify-content: center;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    display: flex;
-  }
-  .close {
-    top: 0px;
-  }
-  .popup-content {
-    padding: 7px;
-    display: flex;
-    align-items: flex-start;
+    width: 147px;
+    height: 186px;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 992px) {

@@ -3,7 +3,11 @@ form.add_form {
 }
 .Color-choices {
   display: grid;
-  grid-template-columns: 50% 50%;
+  grid-template-columns: 2% 48% 2% 48%;
+}
+span.colorss {
+  border: 1px solid;
+  border-right: unset;
 }
 .add_form {
   margin-top: 0;
@@ -334,6 +338,9 @@ z-index: 1;
     max-width: 95%;
     justify-content: center;
   }
+  button.add-to-cart {
+    font-size: 10px;
+  }
   .popup-section .grid-item {
     max-width: fit-content;
   }
@@ -366,6 +373,7 @@ z-index: 1;
   .popup-image {
     display: grid;
     grid-template-columns: 42% 58%;
+    column-gap: 10px;
   }
   .products_imagge {
     margin-top: 10px;
@@ -429,6 +437,7 @@ z-index: 1;
   .popup-image {
     display: grid;
     grid-template-columns: 45% 55%;
+    column-gap: 10px;
   }
   .products_imagge {
     margin-top: 20px;

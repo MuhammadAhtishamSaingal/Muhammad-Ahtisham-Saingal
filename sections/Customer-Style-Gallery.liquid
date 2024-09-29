@@ -49,21 +49,20 @@
                           <span>{{ option.name }}</span>
                           <div class="{{ option.name }}-choices">
                             {% for value in option.values %}
+                              <span
+                                class="colorss"
+                                style="background-color: {{ value | downcase }};"
+                                data-color="{{ value | escape }}"
+                              >
+                              </span>
                               <label>
-                                <span
-                                  class="colorss"
-                                  style="background-color: {{ value | downcase }};"
-                                  data-color="{{ value | escape }}"
-                                >
-                                </span>
-                                <input
-                                  type="radio"
-                                  name="color-option"
-                                  value="{{ value | escape }}"
-                                  data-color="{{ value | escape }}"
-                                >
-
                                 <div class="{{ option.name }}-option" data-{{ option.name }}="{{ value | strip }}">
+                                  <input
+                                    type="radio"
+                                    name="color-option"
+                                    value="{{ value | escape }}"
+                                    data-color="{{ value | escape }}"
+                                  >
                                   {{ value | strip }}
                                 </div>
                               </label>
@@ -126,7 +125,12 @@
                     <!-- Add to Cart Button -->
                     <form action="/cart/add" method="post" enctype="multipart/form-data" class="add_form">
                       <input type="hidden" name="id" value="{{ product.variants.first.id }}">
-                      <button type="submit" data-product="{{ product.id }}" class="add-to-cart">Add to Cart →</button>
+                      <button type="submit" data-product="{{ product.id }}" class="add-to-cart">
+                        <span>ADD TO CART</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="12" viewBox="0 0 36 12" fill="none">
+                          <path d="M1.40918 5.25L0.65918 5.25L0.65918 6.75L1.40918 6.75L1.40918 5.25ZM35.639 6.53033C35.9319 6.23744 35.9319 5.76257 35.639 5.46967L30.866 0.696701C30.5731 0.403808 30.0983 0.403808 29.8054 0.696701C29.5125 0.989594 29.5125 1.46447 29.8054 1.75736L34.048 6L29.8054 10.2426C29.5125 10.5355 29.5125 11.0104 29.8054 11.3033C30.0983 11.5962 30.5731 11.5962 30.866 11.3033L35.639 6.53033ZM1.40918 6.75L35.1087 6.75L35.1087 5.25L1.40918 5.25L1.40918 6.75Z" fill="white"/>
+                        </svg>
+                      </button>
                     </form>
                   </div>
                 </div>
@@ -177,18 +181,7 @@
           "label": "Product Description",
           "default": "This one-piece swimsuit is crafted from jersey featuring an allover micro Monogram motif in relief."
         },
-        {
-          "type": "text",
-          "id": "product_color_options",
-          "label": "Color Options (comma separated)",
-          "default": "White, Black"
-        },
-        {
-          "type": "text",
-          "id": "product_size_options",
-          "label": "Size Options (comma separated)",
-          "default": "Choose your size, S, M, L, XL"
-        }
+
       ]
     }
   ],
@@ -230,10 +223,10 @@
           }
       });
   });
-</script>
+
 
 <!-- Section JavaScript -->
-<script>
+
     document.addEventListener("DOMContentLoaded", function() {
       var imageWrappers = document.querySelectorAll('.image-wrapper');
       var popups = document.querySelectorAll('.popup');
@@ -328,8 +321,7 @@
         });
       });
     });
-</script>
-<script>
+
   document.querySelectorAll('.dropdown-container').forEach(container => {
     const dropdownBox = container.querySelector('.drop-downs');
     const dropdownList = container.querySelector('.dropdown-lists');
@@ -355,8 +347,7 @@
       }
     });
   });
-</script>
-<script>
+
     document.querySelectorAll(".add-to-cart").forEach(atc=>{
       atc.addEventListener("click", function(e){
 
@@ -385,8 +376,7 @@
   })
       })
     })
-</script>
-<script>
+
   const closeButtons = document.querySelectorAll('.close');
 
   closeButtons.forEach(function(button) {
@@ -395,8 +385,7 @@
       button.closest('.popupss').style.display = 'none';
     });
   });
-</script>
-<script>
+
   document.addEventListener('DOMContentLoaded', function () {
     const colorOptions = document.querySelectorAll('input[name="color-option"]');
     

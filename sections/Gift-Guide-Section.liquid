@@ -74,16 +74,23 @@
         <p>No image selected</p>
       {% endif %}
     </div>
-    <div class="gift-guide-illustration mobile_image">
-      {% if section.settings.mobile_image %}
-        <img src="{{ section.settings.mobile_image | img_url: 'master'  }}" alt="Gift Guide Illustration">
-      {% else %}
-        <p>No image selected</p>
-      {% endif %}
+    <div class="mobile_data">
+      <div class="banner-sectionss">
+        <a href="/" class="banner-buttonss"
+          >Shop Now<span class="arrowss">
+            <svg xmlns="http://www.w3.org/2000/svg" width="36" height="12" viewBox="0 0 36 12" fill="none">
+              <path d="M1.40918 5.25L0.65918 5.25L0.65918 6.75L1.40918 6.75L1.40918 5.25ZM35.639 6.53033C35.9319 6.23744 35.9319 5.76257 35.639 5.46967L30.866 0.696701C30.5731 0.403808 30.0983 0.403808 29.8054 0.696701C29.5125 0.989594 29.5125 1.46447 29.8054 1.75736L34.048 6L29.8054 10.2426C29.5125 10.5355 29.5125 11.0104 29.8054 11.3033C30.0983 11.5962 30.5731 11.5962 30.866 11.3033L35.639 6.53033ZM1.40918 6.75L35.1087 6.75L35.1087 5.25L1.40918 5.25L1.40918 6.75Z" fill="white"></path>
+            </svg>
+          </span>
+        </a>
+      </div>
     </div>
   </div>
 </section>
-
+<style>
+  .banner-sectionss{background-image:url("{{ section.settings.banner_imagess | img_url: 'master' }}");
+               }
+</style>
 {% schema %}
 {
   "name": "Gift & Nav Section",
@@ -115,11 +122,6 @@
       "type": "image_picker",
       "id": "image",
       "label": "Gift Guide Illustration Image"
-    },
-      {
-      "type": "image_picker",
-      "id": "mobile_image",
-      "label": "Mobile Image"
     },
 
     {
@@ -183,7 +185,24 @@
       "id": "nav_button_link",
       "label": "Navigation Button Link",
       "default": "/"
+    },
+    {
+      "type": "image_picker",
+      "id": "banner_imagess",
+      "label": "Mobile Background Image"
+    },
+    {
+      "type": "text",
+      "id": "button_textss",
+      "label": "Button Text",
+      "default": "Shop Now"
+    },
+    {
+      "type": "url",
+      "id": "button_linkss",
+      "label": "Mobile Button Link"
     }
+
   ],
   "presets": [
     {
