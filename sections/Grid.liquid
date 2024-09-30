@@ -207,8 +207,12 @@
       var selectedSize = ""; // Placeholder for selected size
 
       // Handle image click to show popup
+     
       imageWrappers.forEach(function(wrapper) {
         wrapper.addEventListener('click', function() {
+           document.querySelectorAll('div.popupss').forEach(function(popup) {
+      popup.style.display = 'none';
+  });
           var popupId = wrapper.getAttribute('data-popup');
           var popup = document.getElementById(popupId);
           popup.style.display = 'block';
@@ -336,6 +340,7 @@
 
         let size = parentObect.querySelector(".drop-downs").innerText.trim();
         let color = parentObect.querySelector("input:checked").value;
+     
 
         let variants = JSON.parse(product.variants);
         variants.forEach(variant=>{
@@ -372,4 +377,26 @@
       });
     });
   });
+</script>
+<script>
+  // Select all divs with the class .Color-option and .Size-option
+  const colorOptions = document.querySelectorAll('.Color-option');
+  const sizeOptions = document.querySelectorAll('.size-option');
+
+  // Function to handle selection of options
+  function handleSelection(options) {
+      options.forEach(option => {
+          option.addEventListener('click', function() {
+              // Remove the 'selected' class from all options in the same group
+              options.forEach(option => option.classList.remove('selected'));
+
+              // Add the 'selected' class to the clicked option
+              this.classList.add('selected');
+          });
+      });
+  }
+
+  // Apply the function to color options and size options
+  handleSelection(colorOptions);
+  handleSelection(sizeOptions);
 </script>

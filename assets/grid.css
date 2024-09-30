@@ -10,6 +10,13 @@ p.gift-guide-text {
   font-size: 20px;
   color: black;
 }
+.Color-option input[type="radio"] {
+  opacity: 0;
+}
+.dropdown-lists li:hover {
+  background: black;
+  color: white;
+}
 span.colorss {
   border: 1px solid;
   border-right: unset;
