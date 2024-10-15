@@ -7,10 +7,7 @@
         <div class="grid-item">
           {% if block.settings.product_image %}
             <div class="image-wrapper" data-popup="popup-{{ block.id }}">
-              <img
-                src="{{ block.settings.product_image | img_url: 'large' }}"
-                alt="{{ block.settings.product_title }}"
-              >
+              <img src="{{ block.settings.product_image | img_url: 'large' }}" alt="{{ block.settings.product_title }}">
               <div class="plus-icon">+</div>
             </div>
 
@@ -160,7 +157,7 @@
   ],
   "presets": [
     {
-      "name": "Grid",
+      "name": "Grids",
       "category": "Custom"
     }
   ]
@@ -169,22 +166,25 @@
 
 <script>
   document.querySelectorAll('.dropdown-container').forEach(container => {
+
       const customSelectBox = container.querySelector('.drop-downs');
       const customSelectList = container.querySelector('.dropdown-lists');
 
       // Toggle dropdown open/close and rotate arrow
       customSelectBox.addEventListener('click', function() {
-          container.classList.toggle('active');
+        
+        container.classList.toggle('active');
       });
 
       // Select item and update dropdown
       customSelectList.querySelectorAll('li').forEach(item => {
           item.addEventListener('click', function() {
+            
               customSelectBox.innerHTML = this.innerHTML;
 
               // Center the text after selection
               customSelectBox.classList.add('center-text');
-
+            
               container.classList.remove('active'); // Close dropdown after selection
           });
       });
@@ -198,7 +198,6 @@
   });
 
 
-<!-- Section JavaScript -->
 
     document.addEventListener("DOMContentLoaded", function() {
       var imageWrappers = document.querySelectorAll('.image-wrapper');
@@ -299,6 +298,8 @@
       });
     });
 
+  //Drop Down Collapse
+
   document.querySelectorAll('.dropdown-container').forEach(container => {
     const dropdownBox = container.querySelector('.drop-downs');
     const dropdownList = container.querySelector('.dropdown-lists');
@@ -346,8 +347,9 @@
         variants.forEach(variant=>{
 
           if(variant.option1 == size && variant.option2 == color){
-            $this.closest("form").querySelector("input[name='id']").value = variant.id;
-            $this.closest("form").submit();
+          this.closest("form").querySelector("input[name='id']").value = variant.id;
+          this.closest("form").submit();
+
           }
         })
       }
@@ -364,19 +366,19 @@
     });
   });
 
-  document.addEventListener('DOMContentLoaded', function () {
-    const colorOptions = document.querySelectorAll('input[name="color-option"]');
+  // document.addEventListener('DOMContentLoaded', function () {
+  //   const colorOptions = document.querySelectorAll('input[name="color-option"]');
     
-    colorOptions.forEach(function (colorOption) {
-      colorOption.addEventListener('change', function () {
-        const selectedColor = this.value; // Get selected color value
-        console.log('Selected Color:', selectedColor); // Log or use the selected color
+  //   colorOptions.forEach(function (colorOption) {
+  //     colorOption.addEventListener('change', function () {
+  //       const selectedColor = this.value; // Get selected color value
+  //       console.log('Selected Color:', selectedColor); // Log or use the selected color
 
-        // You can display the selected color somewhere in the UI
-        document.querySelector('.selected-color-display').textContent = `Selected Color: ${selectedColor}`;
-      });
-    });
-  });
+  //       // You can display the selected color somewhere in the UI
+  //       document.querySelector('.selected-color-display').textContent = `Selected Color: ${selectedColor}`;
+  //     });
+  //   });
+  // });
 </script>
 <script>
   // Select all divs with the class .Color-option and .Size-option
