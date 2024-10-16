@@ -183,6 +183,8 @@
             
               customSelectBox.innerHTML = this.innerHTML;
               container.classList.remove('active'); // Close dropdown after selection
+              customSelectList.style.maxHeight = '0'; // Collapse dropdown
+              addToCartForm.style.marginTop = '0'; // Move Add to Cart button back up
               // Center the text after selection
               customSelectBox.classList.add('center-text');
           });
