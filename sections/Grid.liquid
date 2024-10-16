@@ -181,11 +181,9 @@
           item.addEventListener('click', function() {
             
               customSelectBox.innerHTML = this.innerHTML;
-
+              container.classList.remove('active'); // Close dropdown after selection
               // Center the text after selection
               customSelectBox.classList.add('center-text');
-            debugger
-              container.classList.remove('active'); // Close dropdown after selection
           });
       });
 
