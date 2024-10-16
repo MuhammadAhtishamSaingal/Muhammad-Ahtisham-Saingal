@@ -9,8 +9,7 @@
   align-items: end;
 }
 li.size-option:hover {
-  color: white;
-  background: black;
+  color: black;
 }
 .Color-option {
   background-color: white;
